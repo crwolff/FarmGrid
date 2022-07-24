@@ -1,0 +1,23 @@
+Download nuget packages
+$ dotnet new bepinex5plugin -n Temp -T net47 -U 2020.3.33
+$ cd Temp
+$ dotnet add package Valheim.GameLibs -v *-*
+$ dotnet build
+
+Run dnSpy
+From Valheim/BepInEx/plugins Open:
+    FarmGrid.dll
+From $HOME/.nuget/packages Open:
+    bepinex.baselib/5.4.20/lib/net35/BepInEx.dll
+    harmonyx/2.7.0/lib/net45/0Harmony.dll
+    unityengine.modules/2020.3.33/lib/net45/*.dll
+    valheim.gamelibs/0.202.14-5.0/lib/net40/*.dll
+File->Export to Project
+    Set directory, rest default
+
+$ cd FarmGrid
+$ vi FarmGrid.csproj
+Add reference to UnityEngine (similiar to UnityEngine.CoreModule)
+$ dotnet build
+
+
