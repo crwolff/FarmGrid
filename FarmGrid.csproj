@@ -40,7 +40,7 @@
       <HintPath>..\..\..\.nuget\packages\valheim.gamelibs\0.202.14-r.0\lib\net40\assembly_valheim.dll</HintPath>
     </Reference>
     <Reference Include="BepInEx">
-      <HintPath>..\..\..\.nuget\packages\bepinex.baselib\5.4.20\lib\net35\BepInEx.dll</HintPath>
+      <HintPath>..\..\..\.nuget\packages\bepinex.baselib\5.4.17\lib\net35\BepInEx.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="UnityEngine">
