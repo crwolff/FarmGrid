@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FarmGrid.cs" />
+    <Compile Include="GenericToDataString.cs" />
     <Compile Include="Patches\FarmGrid_Patch.cs" />
     <Compile Include="Patches\Vector3Ext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

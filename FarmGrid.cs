@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using BepInEx;
 using BepInEx.Configuration;
+using BepInEx.Logging;
 using FarmGrid.Patches;
 using HarmonyLib;
 using UnityEngine;
@@ -12,9 +13,12 @@ namespace FarmGrid
 	[BepInPlugin("BepIn.Sarcen.FarmGrid", "FarmGrid", "0.2.0")]
 	public class FarmGrid : BaseUnityPlugin
 	{
+		public static ManualLogSource logger;
+
 		// Token: 0x06000001 RID: 1 RVA: 0x00002050 File Offset: 0x00000250
 		private void Awake()
 		{
+			logger = Logger;
 			FarmGrid.harmony = new Harmony("Harmony.Sarcen.FarmGrid");
 			FarmGrid.harmony.PatchAll();
 			this.plantSpacing = base.Config.Bind<float>("FarmGrid", "plantSpacing", FarmGrid_Patch.plantSpacing, "Amount of space between plants. This is extra spacing on top of the growthsize needed to grow.");

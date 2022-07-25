@@ -5,6 +5,9 @@ using System.Reflection.Emit;
 using HarmonyLib;
 using UnityEngine;
 
+//FarmGrid.logger.LogInfo(String.Format("DrawFarmGrid({0},{1},{2}", pos, gridDir, gridSize));
+//FarmGrid.logger.LogInfo(GenericToDataString.ObjectDumper.Dump(plantObject));
+
 namespace FarmGrid.Patches
 {
 	// Token: 0x02000004 RID: 4
