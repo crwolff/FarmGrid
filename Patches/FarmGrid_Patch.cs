@@ -5,9 +5,6 @@ using System.Reflection.Emit;
 using HarmonyLib;
 using UnityEngine;
 
-//FarmGrid.logger.LogInfo(String.Format("DrawFarmGrid({0},{1},{2}", pos, gridDir, gridSize));
-//FarmGrid.logger.LogInfo(GenericToDataString.ObjectDumper.Dump(plantObject));
-
 namespace FarmGrid.Patches
 {
 	// Token: 0x02000004 RID: 4
@@ -293,6 +290,17 @@ namespace FarmGrid.Patches
 					list.Add(plantObject);
 				}
 			}
+			// For dandelions the collider is returning duplicates which makes the grid vanishingly small
+			// Sort the list and remove duplicates
+			list.OrderBy((FarmGrid_Patch.PlantObject k) => (k.position - pos).sqrMagnitude);
+			for(int i = list.Count-2; i >= 0; i--)
+			{
+				if (list[i].position == list[i+1].position)
+				{
+					list.RemoveAt(i+1);
+				}
+			}
+			//FarmGrid.logger.LogInfo(GenericToDataString.ObjectDumper.Dump(list));
 			return list;
 		}
 
