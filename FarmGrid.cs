@@ -10,7 +10,7 @@ using UnityEngine;
 namespace FarmGrid
 {
 	// Token: 0x02000002 RID: 2
-	[BepInPlugin("BepIn.Sarcen.FarmGrid", "FarmGrid", "0.2.0")]
+	[BepInPlugin("BepIn.Sarcen.FarmGrid", "FarmGrid", "0.2.1")]
 	public class FarmGrid : BaseUnityPlugin
 	{
 		public static ManualLogSource logger;
@@ -57,7 +57,7 @@ namespace FarmGrid
 		internal const string Name = "FarmGrid";
 
 		// Token: 0x04000003 RID: 3
-		internal const string Version = "0.2.0";
+		internal const string Version = "0.2.1";
 
 		// Token: 0x04000004 RID: 4
 		internal const string BepInGUID = "BepIn.Sarcen.FarmGrid";
